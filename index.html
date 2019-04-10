@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pomodoro</title>
+    <meta charset="utf-8"/>
+    <link href="https://fonts.googleapis.com/css?family=Fugaz+One|Audiowide" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
+
+  <body>
+
+    <div id="content">
+
+      <div id="display">
+        <h2 id="mode">Focus</h2>
+        <h1 id="timer">25:00</h1>
+      </div>
+
+      <div class="control-buttons">
+        <img id="restart" src="images/restart.png" onclick="clockController('restart')"/>
+        <img id="play" src="images/play.png" onclick="clockController('play')"/>
+        <img id="pause" src="images/pause.png" onclick="clockController('pause')">
+        <img id="stop" src="images/stop.png" onclick="clockController('stop')"/>
+        <img id="next" src="images/next.png" onclick="clockController('next')"/>
+      </div>
+
+      <div class="time-controls">
+
+        <div class="time-control-individual" id="focus">
+          <p class="time-type">Focus:</p>
+          <input type="button" class="time-down" value="-" onclick="timeDown('focus-time')"/>
+          <p id="focus-time" class="set-time">25</p>
+          <input type="button" class="time-up" value="+" onclick="timeUp('focus-time')"/>
+        </div>
+
+        <div class="time-control-individual" id="short-break">
+          <p class="time-type">Short Break:</p>
+          <input type="button" class="time-down" value="-" onclick="timeDown('short-break-time')"/>
+          <p id="short-break-time" class="set-time">5</p>
+          <input type="button" class="time-up" value="+" onclick="timeUp('short-break-time')"/>
+        </div>
+
+        <div class="time-control-individual" id="long-break">
+          <p class="time-type">Long Break:</p>
+          <input type="button" class="time-down" value="-" onclick="timeDown('long-break-time')"/>
+          <p id="long-break-time" class="set-time">25</p>
+          <input type="button" class="time-up" value="+" onclick="timeUp('long-break-time')"/>
+        </div>
+      </div>
+    </div>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
